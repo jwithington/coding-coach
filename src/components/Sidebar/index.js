@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-// import Button from '../Button';
+import Button from '../Button';
 
 export default function Sidebar({ author }) {
   const [mentor, setMentor] = useState(null);
@@ -33,7 +33,7 @@ export default function Sidebar({ author }) {
     <aside className="md:flex lg:block lg:pl-8 lg:w-1/4">
       {mentor && <FeaturedMentor mentor={mentor} isAuthor={!!author} />}
       <LatestMentors mentors={mentors} />
-      {/* <NewsletterSignup /> */}
+      <NewsletterSignup />
     </aside>
   );
 }
@@ -82,24 +82,24 @@ function LatestMentors({ mentors }) {
 }
 
 // @TODO: Integrate with SendGrid
-// function NewsletterSignup() {
-//   return (
-//     <div className="mb-12 pt-4 md:flex-1 lg:flex-none">
-//       <SidebarTitle>Newsletter signup</SidebarTitle>
-//       <form>
-//         <label className="block mb-2">
-//           <span className="text-sm font-body">Name:</span>
-//           <input type="text" name="name" className="border border-secondary rounded w-full px-2 py-1" />
-//         </label>
-//         <label className="block mb-2">
-//           <span className="text-sm font-body">Email:</span>
-//           <input type="email" name="email" className="border border-secondary rounded w-full px-2 py-1" />
-//         </label>
-//         <Button className="mt-4">Register</Button>
-//       </form>
-//     </div>
-//   );
-// }
+function NewsletterSignup() {
+  return (
+    <div className="mb-12 pt-4 md:flex-1 lg:flex-none">
+      <SidebarTitle>Newsletter signup</SidebarTitle>
+      <form>
+        <label className="block mb-2">
+          <span className="text-sm font-body">Name:</span>
+          <input type="text" name="name" className="border border-secondary rounded w-full px-2 py-1" />
+        </label>
+        <label className="block mb-2">
+          <span className="text-sm font-body">Email:</span>
+          <input type="email" name="email" className="border border-secondary rounded w-full px-2 py-1" />
+        </label>
+        <Button className="mt-4">Register</Button>
+      </form>
+    </div>
+  );
+}
 
 function SidebarTitle({ children }) {
   return (
