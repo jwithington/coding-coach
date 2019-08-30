@@ -54,6 +54,9 @@ typings/
 # dotenv environment variables file
 .env
 
+# sendgrid API
+sendgrid.env
+
 # gatsby files
 .cache/
 public
@@ -66,4 +69,4 @@ yarn-error.log
 .pnp/
 .pnp.js
 # Yarn Integrity file
-.yarn-integrity
+.yarn-integritysendgrid.env
